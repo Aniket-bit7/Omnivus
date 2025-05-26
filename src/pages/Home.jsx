@@ -107,6 +107,28 @@ const Home = () => {
           ))}
         </div>
       </section>
+    {/* Core Features */}
+      <section className="bg-blue-100 py-20 px-20 flex">
+        <div>
+          <div className="mt-10">
+            <img className="border-4 border-white" src="https://html.webtend.net/omnivus/assets/img/tile-gallery/tile-gallery-01.jpg"/>
+          </div>
+          <div className="px-12 mt-[-60px]">
+            <img className="border-4 border-white" src="https://html.webtend.net/omnivus/assets/img/tile-gallery/tile-gallery-02.jpg" />
+          </div>
+        </div>
+
+        <div className="mt-20 px-10 flex flex-col">
+          <h4 className="text-blue-800 font-medium">CORE FEATURES</h4>
+          <h1 className="text-blue-950 font-bold text-7xl">Get More Good <br/> Experience.</h1>
+          <h2 className="text-blue-400 mt-10 font-medium text-3xl">Our knowledge of computers will help us</h2>
+          <p className="text-base text-sky-500 mt-10 font-medium">Does any industry face a more complex audience journey and marketing sales <br/> process than B2B technology? Consider the number of people who influence a <br/> sale, the length of the decision-making cycle, the competing interests of the <br/> people who purchase, implement, manage, and use the technology. It’s a lot <br/> meaningful content here.</p>
+          <div className="flex gap-10 mt-10">
+            <button className="bg-blue-700 rounded text-white font-serif p-4 px-5 hover:bg-blue-950 text-white">Learn More</button>
+            <button className="bg-gray-400 rounded text-white font-serif p-4 px-8 hover:bg-blue-950 text-white">Intro Video</button>
+          </div>
+        </div>
+      </section>
     </main>
   );
 };
