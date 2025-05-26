@@ -1,6 +1,33 @@
 import { ArrowRight } from "lucide-react";
 import React from "react";
 import { Link } from "react-router-dom";
+import {
+  FaChalkboard,
+  FaDatabase,
+  FaFingerprint,
+  FaLaptopCode,
+} from "react-icons/fa";
+
+const colorMap = {
+  green: "text-green-700",
+  blue: "text-blue-700",
+  orange: "text-orange-700",
+  red: "text-red-700",
+};
+
+const bgColorMap = {
+  green: "bg-green-100",
+  blue: "bg-blue-100",
+  orange: "bg-orange-100",
+  red: "bg-red-100",
+};
+
+const services = [
+  { icon: <FaLaptopCode />, title: "IT Solutions", color: "green" },
+  { icon: <FaFingerprint />, title: "Security System", color: "blue" },
+  { icon: <FaChalkboard />, title: "Web Development", color: "orange" },
+  { icon: <FaDatabase />, title: "Database Security", color: "red" },
+];
 
 const Home = () => {
   return (
@@ -44,6 +71,42 @@ const Home = () => {
         </div>
       </div>
       {/* What-We-Do */}
+
+      <section className="py-16 bg-white">
+        <div className="text-center mb-12">
+          <h6 className="text-xl font-medium text-blue-700">Services</h6>
+          <h1 className="text-5xl font-semibold text-blue-950">What We Do</h1>
+        </div>
+        <div className="flex justify-center items-center gap-8 py-12 px-8">
+          {services.map((service, idx) => (
+            <div
+              key={idx}
+              className="flex flex-col items-center text-center border p-6 rounded-lg shadow-lg cursor-pointer group w-72 bg-white text-black transition-all duration-500 ease-in-out hover:bg-blue-600 hover:text-white hover:shadow-xl hover:scale-105 transform"
+            >
+              {/* Icon Circle */}
+              <div
+                className={`mb-4 ${
+                  bgColorMap[service.color]
+                } w-28 h-28 rounded-full flex items-center justify-center transition-colors duration-300 group-hover:bg-white`}
+              >
+                <div
+                  className={`${
+                    colorMap[service.color]
+                  } text-4xl group-hover:text-${colorMap[service.color]}-600`}
+                >
+                  {service.icon}
+                </div>
+              </div>
+
+              {/* Title & Description */}
+              <h2 className="text-xl font-semibold mb-4">{service.title}</h2>
+              <p className="text-gray-500 group-hover:text-white mb-10">
+                Sed ut perspiciatis unde omnis iste natus error volup
+              </p>
+            </div>
+          ))}
+        </div>
+      </section>
     </main>
   );
 };

@@ -14,7 +14,7 @@ const Header = () => {
       </Link>
       <div className="flex space-x-6 justify-center items-center text-lg">
         <div className="flex space-x-8 justify-center items-center font-medium text-stone-700">
-        <Link to="/">Home +</Link>
+        <Link to="/" className="text-blue-900">Home +</Link>
         <Link to="/">About</Link>
         <Link to="/services">Services +</Link>
         <Link to="/">Pages +</Link>
