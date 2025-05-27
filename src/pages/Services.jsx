@@ -1,7 +1,11 @@
+import Navbar from "../components/Navbar"
 
 const Services = () => {
   return (
-    <div>Services</div>
+    <main className="min-h-screen bg-white font-sans">
+      {/* Navbar */}
+      <Navbar/>
+    </main>
   )
 }
 
