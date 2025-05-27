@@ -3,6 +3,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import {
   FaChalkboard,
+  FaCommentDots,
   FaDatabase,
   FaFingerprint,
   FaLaptopCode,
@@ -248,7 +249,7 @@ const Home = () => {
                   IT / Solutions
                 </h6>
                 <h4 className="text-white text-2xl font-bold">
-                  How To Improve <br/> IT Knowledge
+                  How To Improve <br /> IT Knowledge
                 </h4>
 
                 {/* Arrow Button */}
@@ -260,7 +261,32 @@ const Home = () => {
           ))}
         </div>
       </section>
-      
+      {/* info */}
+      <section className="bg-blue-950">
+        <div className="flex p-8 gap-12 justify-center flex-wrap">
+          {[
+            { number: "280", label: "Our Branches", color: "bg-green-600" },
+            { number: "782", label: "Projects Done", color: "bg-yellow-600" },
+            { number: "1M", label: "Happy Users", color: "bg-red-600" },
+            { number: "100", label: "Awards...", color: "bg-blue-600" },
+          ].map((item, idx) => (
+            <div
+              key={idx}
+              className={`flex flex-col border-2 border-gray-700 p-8 gap-4 justify-center items-center w-60 ${
+                idx % 2 !== 0 ? "mt-16 mb-10" : ""
+              }`}
+            >
+              <div
+                className={`w-20 h-20 rounded-full ${item.color} flex items-center justify-center`}
+              >
+                <FaCommentDots className="text-white w-5 h-5" />
+              </div>
+              <h1 className="text-3xl font-bold text-white">{item.number}</h1>
+              <h6 className="text-sm font-semibold text-white">{item.label}</h6>
+            </div>
+          ))}
+        </div>
+      </section>
     </main>
   );
 };
