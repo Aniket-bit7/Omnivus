@@ -399,6 +399,51 @@ const Home = () => {
         </div>
       </div>
     </section>
+
+    {/* Latest News */}
+  
+        <section className="flex flex-col">
+          <div className="flex flex-col justify-center items-center pt-20">
+            <h4 className="text-blue-700 font-medium text-2xl">Latest News</h4>
+            <h1 className="text-blue-950 font-extrabold text-6xl">Read Our Latest</h1>
+            <h1 className="text-blue-950 font-extrabold text-6xl">News & Blog</h1>
+          </div>
+          <div className="flex justify-center gap-6 pt-16 mb-16">
+            <div className="flex flex-col justify-start">
+                <img src="https://html.webtend.net/omnivus/assets/img/latest-news/01.jpg"/>
+                <div className="pl-4 p-4 flex flex-col gap-4">
+                <h6 className="text-blue-700 font-bold font-serif">By Admin, 05 Aug 2019</h6>
+                <h4 className="font-extrabold text-2xl">Monthly Web Development <br/> Update Design Ethics & <br/> Clarity Over Solution</h4>
+                <div className="flex gap-2 items-center">
+                <h6 className="text-gray-600">Read More</h6>
+                <ArrowRight className="w-5 h-5 text-gray-600"/>
+                </div>
+              </div>
+            </div>
+            <div className="flex flex-col justify-start">
+                <img src="https://html.webtend.net/omnivus/assets/img/latest-news/02.jpg"/>
+                <div className="pl-4 p-4 flex flex-col gap-4">
+                <h6 className="text-blue-700 font-bold font-serif">By Admin, 05 Aug 2019</h6>
+                <h4 className="font-extrabold text-2xl">Design System: What It And <br/> How To Create One Using <br/> Indigo Design Sence</h4>
+                <div className="flex gap-2 items-center">
+                <h6 className="text-gray-600">Read More</h6>
+                <ArrowRight className="w-5 h-5 text-gray-600"/>
+                </div>
+              </div>
+            </div>
+            <div className="flex flex-col justify-start">
+                <img src="https://html.webtend.net/omnivus/assets/img/latest-news/03.jpg"/>
+                <div className="pl-4 p-4 flex flex-col gap-4">
+                <h6 className="text-blue-700 font-bold font-serif">By Admin, 05 Aug 2019</h6>
+                <h4 className="font-extrabold text-2xl">How We Used WebAssembly <br/> To Speed Up Our Web App <br/> By Omnivus</h4>
+                <div className="flex gap-2 items-center">
+                <h6 className="text-gray-600">Read More</h6>
+                <ArrowRight className="w-5 h-5 text-gray-600"/>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
     </main>
   );
 };
