@@ -12,6 +12,8 @@ import {
   FaLaptopCode,
   FaTwitter,
 } from "react-icons/fa";
+import Header from "../components/Header";
+import Footer from "../components/Footer";
 
 const colorMap = {
   green: "text-green-700",
@@ -47,6 +49,8 @@ const Home = () => {
   return (
     // Hero Section :
     <main className="min-h-screen bg-white font-sans">
+      {/* Navbar */}
+      <Header/>
       {/* Fullscreen Background Image */}
       <div className="h-screen bg-[url('https://images.pexels.com/photos/281260/pexels-photo-281260.jpeg?cs=srgb&dl=pexels-francesco-ungaro-281260.jpg&fm=jpg')] bg-cover bg-center">
         {/* Optional Dark Overlay */}
@@ -409,7 +413,7 @@ const Home = () => {
             <h1 className="text-blue-950 font-extrabold text-6xl">News & Blog</h1>
           </div>
           <div className="flex justify-center gap-6 pt-16 mb-16">
-            <div className="flex flex-col justify-start">
+            <div className="flex flex-col justify-start border-2 border-gray-200">
                 <img src="https://html.webtend.net/omnivus/assets/img/latest-news/01.jpg"/>
                 <div className="pl-4 p-4 flex flex-col gap-4">
                 <h6 className="text-blue-700 font-bold font-serif">By Admin, 05 Aug 2019</h6>
@@ -420,7 +424,7 @@ const Home = () => {
                 </div>
               </div>
             </div>
-            <div className="flex flex-col justify-start">
+            <div className="flex flex-col justify-start border-2 border-gray-200">
                 <img src="https://html.webtend.net/omnivus/assets/img/latest-news/02.jpg"/>
                 <div className="pl-4 p-4 flex flex-col gap-4">
                 <h6 className="text-blue-700 font-bold font-serif">By Admin, 05 Aug 2019</h6>
@@ -431,7 +435,7 @@ const Home = () => {
                 </div>
               </div>
             </div>
-            <div className="flex flex-col justify-start">
+            <div className="flex flex-col justify-start border-2 border-gray-200">
                 <img src="https://html.webtend.net/omnivus/assets/img/latest-news/03.jpg"/>
                 <div className="pl-4 p-4 flex flex-col gap-4">
                 <h6 className="text-blue-700 font-bold font-serif">By Admin, 05 Aug 2019</h6>
@@ -444,6 +448,9 @@ const Home = () => {
             </div>
           </div>
         </section>
+
+        {/* Footer */}
+          <Footer/>
     </main>
   );
 };

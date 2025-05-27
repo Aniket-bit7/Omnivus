@@ -7,7 +7,6 @@ import './style.css';
 function App() {
   return (
     <>
-    <Header/>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/blog" element={<Blog />} />

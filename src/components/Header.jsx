@@ -14,12 +14,12 @@ const Header = () => {
       </Link>
       <div className="flex space-x-6 justify-center items-center text-lg">
         <div className="flex space-x-8 justify-center items-center font-medium text-stone-700">
-        <Link to="/" className="text-blue-900">Home +</Link>
-        <Link to="/">About</Link>
-        <Link to="/services">Services +</Link>
-        <Link to="/">Pages +</Link>
-        <Link to="/blog">Blog +</Link>
-        <Link to="/">Contact</Link>
+        <Link to="/" className="hover:text-blue-900">Home +</Link>
+        <Link to="/" className="hover:text-blue-900">About</Link>
+        <Link to="/services" className="hover:text-blue-900">Services +</Link>
+        <Link to="/" className="hover:text-blue-900">Pages +</Link>
+        <Link to="/blog" className="hover:text-blue-900">Blog +</Link>
+        <Link to="/" className="hover:text-blue-900">Contact</Link>
         </div>
         <div className="flex space-x-6 justify-center items-center">
         <Link to="/">
