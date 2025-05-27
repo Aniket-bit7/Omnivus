@@ -287,6 +287,32 @@ const Home = () => {
           ))}
         </div>
       </section>
+
+      {/* Team Members */}
+      <section>
+      <div className="flex flex-col">
+        <div className="flex flex-col justify-center items-center mt-16">
+          <h4 className="text-blue-700 font-medium text-2xl">Our Team Member</h4>
+          <h1 className="text-blue-950 font-bold text-5xl">Meet Our Exclusive</h1>
+          <h1 className="text-blue-950 font-bold text-5xl">Leadership</h1>
+        </div>
+        <div className="flex gap-4 mt-20">
+          {[
+            {image : "https://html.webtend.net/omnivus/assets/img/team/team-01.jpg", title: "Harry Garrett", prof: "Design Expert"},
+            {image : "https://html.webtend.net/omnivus/assets/img/team/team-02.jpg", title: "Doris Jordan", prof: "Design Expert"},
+            {image : "https://html.webtend.net/omnivus/assets/img/team/team-05.jpg", title: "Dianna Wagner", prof: "Design Expert"},
+            {image : "https://html.webtend.net/omnivus/assets/img/team/team-03.jpg", title: "Harry Garrett", prof: "Design Expert"},
+            {image : "https://html.webtend.net/omnivus/assets/img/team/team-04.jpg", title: "Johnny Ramirez", prof: "Design Expert"},
+            {image : "https://html.webtend.net/omnivus/assets/img/team/team-01.jpg", title: "Harry Garrett", prof: "Design Expert"}
+          ].map((key, idx)=> 
+          <div key= {idx} className="bg-white flex flex-col justify-center items-center border border-gray-200 rounded">
+            <img src={key.image}/>
+            <h2 className="font-bold text-2xl mt-6">{key.title}</h2>
+            <h5 className="text-sm mb-6">{key.prof}</h5>
+          </div>)}
+        </div>
+      </div>
+      </section>
     </main>
   );
 };
