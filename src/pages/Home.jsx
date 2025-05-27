@@ -3,6 +3,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import {
   FaChalkboard,
+  FaComment,
   FaCommentDots,
   FaDatabase,
   FaFacebook,
@@ -379,6 +380,23 @@ const Home = () => {
               </div>
             </div>
           </div>
+      </div>
+    </section>
+
+    {/* call to action */}
+
+    <section className="bg-blue-700">
+      <div className="flex px-12 py-12 w-full max-w-screen-xl mx-auto gap-7">
+        <div className="flex flex-col justify-start mr-64 mt-16 mb-16">
+          <h4 className="font-medium text-sm text-white">CALL TO ACTION</h4>
+          <h1 className="font-bold text-6xl text-white">Let’s Discuss With Us</h1>
+          <h1 className="font-bold text-6xl text-white">Your Estimate.</h1>
+        </div>
+        <div>
+          <button className="flex items-center p-4 mt-24 w-full max-w-screen-xl mx-auto gap-3 bg-white rounded">
+            <FaComment/> Contact Us
+          </button>
+        </div>
       </div>
     </section>
     </main>
