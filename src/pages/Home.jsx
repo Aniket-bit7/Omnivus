@@ -1,12 +1,15 @@
-import { ArrowLeft, ArrowRight, Video } from "lucide-react";
+import { ArrowLeft, ArrowRight, Instagram, Video } from "lucide-react";
 import React from "react";
 import { Link } from "react-router-dom";
 import {
   FaChalkboard,
   FaCommentDots,
   FaDatabase,
+  FaFacebook,
   FaFingerprint,
+  FaInstagram,
   FaLaptopCode,
+  FaTwitter,
 } from "react-icons/fa";
 
 const colorMap = {
@@ -296,7 +299,8 @@ const Home = () => {
           <h1 className="text-blue-950 font-bold text-5xl">Meet Our Exclusive</h1>
           <h1 className="text-blue-950 font-bold text-5xl">Leadership</h1>
         </div>
-        <div className="flex gap-4 mt-20">
+
+        <div className="flex flex-wrap justify-center gap-6 mt-20 px-6">
           {[
             {image : "https://html.webtend.net/omnivus/assets/img/team/team-01.jpg", title: "Harry Garrett", prof: "Design Expert"},
             {image : "https://html.webtend.net/omnivus/assets/img/team/team-02.jpg", title: "Doris Jordan", prof: "Design Expert"},
@@ -304,15 +308,79 @@ const Home = () => {
             {image : "https://html.webtend.net/omnivus/assets/img/team/team-03.jpg", title: "Harry Garrett", prof: "Design Expert"},
             {image : "https://html.webtend.net/omnivus/assets/img/team/team-04.jpg", title: "Johnny Ramirez", prof: "Design Expert"},
             {image : "https://html.webtend.net/omnivus/assets/img/team/team-01.jpg", title: "Harry Garrett", prof: "Design Expert"}
-          ].map((key, idx)=> 
-          <div key= {idx} className="bg-white flex flex-col justify-center items-center border border-gray-200 rounded">
-            <img src={key.image}/>
-            <h2 className="font-bold text-2xl mt-6">{key.title}</h2>
-            <h5 className="text-sm mb-6">{key.prof}</h5>
-          </div>)}
+          ].map((member, idx) => (
+            <div
+              key={idx}
+              className="relative group w-72 border border-gray-200 rounded overflow-hidden shadow-md"
+            >
+              <img src={member.image} alt={member.title} className="w-full h-auto" />
+
+              {/* Overlay on hover */}
+              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent opacity-0 group-hover:opacity-100 transition duration-500 flex items-end justify-center p-20 gap-2">
+                <button className="w-10 h-10 rounded-full bg-white text-blue-700 flex items-center justify-center shadow-md hover:bg-blue-700 hover:text-white transition">
+                  <FaFacebook className="w-4 h-4" />
+                </button>
+                <button className="w-10 h-10 rounded-full bg-white text-blue-700 flex items-center justify-center shadow-md hover:bg-blue-700 hover:text-white transition">
+                  <FaInstagram className="w-4 h-4" />
+                </button>
+                <button className="w-10 h-10 rounded-full bg-white text-blue-700 flex items-center justify-center shadow-md hover:bg-blue-700 hover:text-white transition">
+                  <FaTwitter className="w-4 h-4" />
+                </button>
+              </div>
+
+              {/* Text below image */}
+              <div className="flex flex-col items-center py-6 bg-white">
+                <h2 className="font-bold text-2xl">{member.title}</h2>
+                <h5 className="text-sm text-gray-600">{member.prof}</h5>
+              </div>
+            </div>
+          ))}
         </div>
       </div>
-      </section>
+    </section>
+
+    {/* client testimonial */}
+
+    <section className="bg-sky-100 mt-16">
+      <div className="flex flex-col">
+          <div className="flex flex-col justify-center items-center py-16">
+            <h4 className="text-blue-700 font-medium text-2xl">Client Testimonials</h4>
+            <h1 className="text-blue-950 font-bold text-6xl">What our clients say</h1>
+          </div>
+          <div className="flex gap-4 justify-center items-center mb-16">
+            <div>
+              <div className="bg-white w-80 h-50 p-6 border-t-4 border-red-700">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sed amet fuga tempora quis error explicabo.</div>
+              <div className="flex gap-3 mt-5">
+                <img src="https://html.webtend.net/omnivus/assets/img/testimonials/03.png"/>
+                <div className="flex flex-col gap-3 mt-2">
+                  <h4 className="font-bold">Philip Mendez</h4>
+                  <h6 className="text-gray-500">Consectetur</h6>
+                </div>
+              </div>
+            </div>
+            <div>
+              <div className="bg-white w-80 h-50 p-6 border-t-4 border-blue-700">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sed amet fuga tempora quis error explicabo.</div>
+              <div className="flex gap-3 mt-5">
+                <img src="https://html.webtend.net/omnivus/assets/img/testimonials/01.png"/>
+                <div className="flex flex-col gap-3 mt-2">
+                  <h4 className="font-bold">Eugene Freeman</h4>
+                  <h6 className="text-gray-500">Tincidunt</h6>
+                </div>
+              </div>
+            </div>
+            <div>
+              <div className="bg-white w-80 h-50 p-6 border-t-4 border-green-700">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sed amet fuga tempora quis error explicabo.</div>
+              <div className="flex gap-3 mt-5">
+                <img src="https://html.webtend.net/omnivus/assets/img/testimonials/02.png"/>
+                <div className="flex flex-col gap-3 mt-2">
+                  <h4 className="font-bold">Kelly Coleman</h4>
+                  <h6 className="text-gray-500">Nulla nec</h6>
+                </div>
+              </div>
+            </div>
+          </div>
+      </div>
+    </section>
     </main>
   );
 };
