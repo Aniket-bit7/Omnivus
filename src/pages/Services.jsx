@@ -132,6 +132,7 @@ const Services = () => {
   return (
     <main className="min-h-screen bg-white font-sans">
       <Navbar />
+
       {/* Hero Section */}
       <section className="flex flex-col justify-center items-center mt-16 text-center px-4">
         <h1 className="font-extrabold text-4xl sm:text-6xl lg:text-7xl text-blue-950">
@@ -153,7 +154,7 @@ const Services = () => {
               <img
                 src={item.image}
                 alt={item.work}
-                className="w-full h-64 sm:h-80 object-cover"
+                className="w-full h-[250px] sm:h-[300px] md:h-[350px] object-cover"
               />
               <div className="absolute bottom-0 left-0 w-full h-full bg-gradient-to-t from-blue-800/70 via-blue-600/40 to-transparent opacity-0 group-hover:opacity-100 transition duration-500 flex flex-col justify-end p-4">
                 <div className="flex gap-4 items-center">
@@ -162,9 +163,7 @@ const Services = () => {
                     {item.work}
                   </h4>
                 </div>
-                <p className="text-sm font-semibold text-white">
-                  {item.des}
-                </p>
+                <p className="text-sm font-semibold text-white">{item.des}</p>
               </div>
             </div>
           ))}
@@ -180,12 +179,12 @@ const Services = () => {
               Here are the plans
             </h1>
           </div>
-          <div className="flex gap-4 bg-white p-2 rounded-md">
+          <div className="flex gap-4 bg-white p-2 rounded-md flex-wrap">
             {["Monthly", "Yearly"].map((type) => (
               <button
                 key={type}
                 onClick={() => handleClick(type)}
-                className={`text-lg sm:text-xl px-4 py-2 rounded ${
+                className={`text-lg sm:text-xl px-4 py-2 rounded transition-all duration-300 ${
                   period === type
                     ? "bg-blue-700 text-white"
                     : "bg-gray-200 text-black"
@@ -201,7 +200,7 @@ const Services = () => {
           {pricingData[period].map((plan, idx) => (
             <div
               key={idx}
-              className="bg-white rounded-lg shadow p-6 text-center w-full sm:w-[45%] lg:w-[22%] transition-all duration-300 group hover:bg-blue-700 hover:text-white"
+              className="bg-white rounded-lg shadow p-6 text-center w-full sm:w-[48%] md:w-[30%] lg:w-[22%] transition-all duration-300 group hover:bg-blue-700 hover:text-white"
             >
               <h2 className="text-xl font-bold text-blue-900 group-hover:text-white">
                 {plan.title}
@@ -213,13 +212,11 @@ const Services = () => {
               <p className="text-sm font-bold text-sky-400 group-hover:text-blue-200">
                 {period === "Monthly" ? "Per Month" : "Per Year"}
               </p>
-              <p className="text-sky-400 mb-3 group-hover:text-blue-200">
-                _____
-              </p>
+              <p className="text-sky-400 mb-3 group-hover:text-blue-200">_____</p>
               <p className="text-sky-600 mb-6 group-hover:text-blue-100">
                 {plan.description}
               </p>
-              <button className="px-6 py-2 bg-blue-600 text-white font-semibold rounded transition group-hover:bg-white group-hover:text-blue-700 hover:bg-blue-800">
+              <button className="w-full px-6 py-2 bg-blue-600 text-white font-semibold rounded transition group-hover:bg-white group-hover:text-blue-700 hover:bg-blue-800">
                 Purchase Now
               </button>
             </div>
@@ -242,12 +239,12 @@ const Services = () => {
           {news.map((item, idx) => (
             <div
               key={idx}
-              className="flex flex-col items-center text-white max-w-xs text-center"
+              className="flex flex-col items-center text-white w-full sm:w-80 text-center"
             >
               <img
                 src={item.image}
                 alt={item.post}
-                className="rounded w-full"
+                className="rounded w-full object-cover h-100"
               />
               <h3 className="text-xl sm:text-2xl font-bold mt-4">
                 {item.post}

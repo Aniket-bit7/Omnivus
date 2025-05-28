@@ -37,30 +37,30 @@ const Footer = () => {
               <Link to="/services" className="flex items-center gap-2">
                 <FaAngleRight /> Services
               </Link>
-              <Link to="/" className="flex items-center gap-2">
+              <Link to="#" className="flex items-center gap-2">
                 <FaAngleRight /> About
               </Link>
-              <Link to="/" className="flex items-center gap-2">
+              <Link to="#" className="flex items-center gap-2">
                 <FaAngleRight /> Career
               </Link>
-              <Link to="/" className="flex items-center gap-2">
+              <Link to="#" className="flex items-center gap-2">
                 <FaAngleRight /> Refund
               </Link>
-              <Link to="/" className="flex items-center gap-2">
+              <Link to="#" className="flex items-center gap-2">
                 <FaAngleRight /> Terms
               </Link>
             </div>
             <div className="flex flex-col gap-3 text-white text-sm">
-              <Link to="/" className="flex items-center gap-2">
+              <Link to="#" className="flex items-center gap-2">
                 <FaAngleRight /> Details
               </Link>
-              <Link to="/" className="flex items-center gap-2">
+              <Link to="#" className="flex items-center gap-2">
                 <FaAngleRight /> Contact
               </Link>
-              <Link to="/" className="flex items-center gap-2">
+              <Link to="#" className="flex items-center gap-2">
                 <FaAngleRight /> Business
               </Link>
-              <Link to="/" className="flex items-center gap-2">
+              <Link to="#" className="flex items-center gap-2">
                 <FaAngleRight /> Affiliate
               </Link>
             </div>
@@ -82,7 +82,7 @@ const Footer = () => {
             partner in the field of logistics and cargo forwarding.
           </p>
           <Link
-            to="/"
+            to="#"
             className="flex items-center gap-2 text-blue-400 hover:text-white font-bold text-sm"
           >
             <FaAngleRight /> Discover More

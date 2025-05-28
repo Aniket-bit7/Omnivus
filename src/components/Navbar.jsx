@@ -58,7 +58,7 @@ const Navbar = () => {
             <Link to="/" className="hover:text-blue-900 transition-colors">
               Home +
             </Link>
-            <Link to="/" className="hover:text-blue-900 transition-colors">
+            <Link to="#" className="hover:text-blue-900 transition-colors">
               About
             </Link>
             <Link
@@ -67,13 +67,13 @@ const Navbar = () => {
             >
               Services +
             </Link>
-            <Link to="/" className="hover:text-blue-900 transition-colors">
+            <Link to="#" className="hover:text-blue-900 transition-colors">
               Pages +
             </Link>
             <Link to="/blog" className="hover:text-blue-900 transition-colors">
               Blog +
             </Link>
-            <Link to="/" className="hover:text-blue-900 transition-colors">
+            <Link to="#" className="hover:text-blue-900 transition-colors">
               Contact
             </Link>
           </div>

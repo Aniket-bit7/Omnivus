@@ -1,4 +1,4 @@
-import { FaArrowRight, FaCalendar, FaComment, FaEye, FaFacebook, FaInstagram, FaLinkedin, FaTwitter, FaYoutube } from "react-icons/fa";
+import { FaArrowRight, FaCalendar, FaComment, FaEye, FaFacebook, FaInstagram, FaLinkedin, FaSearch, FaTwitter, FaYoutube } from "react-icons/fa";
 import Navbar from "../components/Navbar";
 import { ArrowLeft, ArrowRight } from "lucide-react";
 import Footer from "../components/Footer";
@@ -316,7 +316,7 @@ const Blog = () => {
             </div>
           </div>
           {/* cards for column 2 */}
-          <div className="flex flex-col gap-8">
+          <div className="flex flex-col gap-12">
             {/* card-1 */}
             <div className="border-2 border-gray-300 p-8">
               <div className="flex gap-4 mb-6">
@@ -371,7 +371,207 @@ const Blog = () => {
                 </div>
               </div>
             </div>
+            {/* card-2 */}
+            <div className="border-2 border-gray-300 p-8">
+              <div className="flex gap-4 mb-6">
+                <h3 className="text-blue-700 font-bold">__ _</h3>
+                <h3 className="text-blue-950 font-bold text-xl">Search Objects</h3>
+              </div>
+              <div className="flex">
+                <input type="text" placeholder="Search your keyword..." className="bg-blue-100 px-8 py-4 text-xs"/>
+                <button className="bg-blue-700 text-white px-6 py-4">
+                  <FaSearch className="w-5 h-5"/>
+                </button>
+              </div>
+            </div>
+            {/* card-3 */}
+            <div className="border-2 border-gray-300 p-8">
+              <div className="flex gap-4 mb-6">
+                <h3 className="text-blue-700 font-bold">__ _</h3>
+                <h3 className="text-blue-950 font-bold text-xl">Popular Feeds</h3>
+              </div>
+              <div className="flex flex-col gap-8 ">
+                {[
+                  {des :(
+                    <>
+                      Lorem ipsum dolor
+                      sit <br />cing elit, sed do.
+                    </>
+                  ), images: "https://html.webtend.net/omnivus/assets/img/sidebar/feeds-1.png", date: "24th March 2019"},
+                  {des :(
+                    <>
+                      Lorem ipsum dolor
+                      sit <br />cing elit, sed do.
+                    </>
+                  ), images: "https://html.webtend.net/omnivus/assets/img/sidebar/feeds-2.png", date: "24th March 2019"},
+                  {des :(
+                    <>
+                      Lorem ipsum dolor
+                      sit <br />cing elit, sed do.
+                    </>
+                  ), images: "https://html.webtend.net/omnivus/assets/img/sidebar/feeds-3.png", date: "24th March 2019"},
+                  {des :(
+                    <>
+                      Lorem ipsum dolor
+                      sit <br />cing elit, sed do.
+                    </>
+                  ), images: "https://html.webtend.net/omnivus/assets/img/sidebar/feeds-4.png", date: "24th March 2019"},
+                ].map((items, idx)=>
+                <div key = {idx} className="flex gap-6">
+                    <img src={items.images}/>
+                    <div className="flex flex-col gap-3">
+                        <p className="text-blue-950 font-semibold">{items.des}</p>
+                        <p className="flex gap-2 items-center text-sm text-blue-500"><FaCalendar/>{items.date}</p>
+                    </div>
+                </div>)}
+              </div>
+            </div>
+          {/* card-4 */}
+          <div className="border-2 border-gray-300 p-8">
+            <div className="flex gap-4 mb-6">
+                <h3 className="text-blue-700 font-bold">__ _</h3>
+                <h3 className="text-blue-950 font-bold text-xl">Categories</h3>
+            </div>
+            <div className="flex flex-col gap-4">
+                {[
+                  {category: "Business", numbers: 26},
+                  {category: "Consultant", numbers: 30},
+                  {category: "Creative", numbers: 71},
+                  {category: "UI/UX", numbers: 66},
+                  {category: "Technology", numbers: 60},
+                ].map((key, idx) =>
+                <div className="flex border-2 border-gray-400" key={idx}>
+                  <button className="bg-blue-950 text-white px-10 py-3 w-[100%]">{key.category}</button>
+                  <button className="bg-black text-white px-6 py-4">{key.numbers}</button>
+                </div>)}
+            </div>
           </div>
+          {/* card-5 */}
+          <div className="border-2 border-gray-300 p-8">
+              <div className="flex gap-4 mb-6">
+                <h3 className="text-blue-700 font-bold">__ _</h3>
+                <h3 className="text-blue-950 font-bold text-xl">Never Miss News</h3>
+              </div>
+              <div className="flex gap-3 items-center justify-center mb-4 pt-2 sm:mt-0 text-blue-700">
+                <div className="bg-black text-white p-2">
+                  <Link
+                    to="#"
+                    className="hover:text-blue-500 transition-colors"
+                  >
+                    <FaFacebook className="w-5 h-5" />
+                  </Link>
+                </div>
+
+                <div className="bg-black text-white p-2">
+                  <Link
+                    to="#"
+                    className="hover:text-blue-500 transition-colors"
+                  >
+                    <FaTwitter className="w-5 h-5" />
+                  </Link>
+                  </div>
+                  <div className="bg-black text-white p-2">
+                  <Link
+                    to="#"
+                    className="hover:text-pink-500 transition-colors"
+                  >
+                    <FaInstagram className="w-5 h-5" />
+                  </Link>
+                  </div>
+                  <div className="bg-black text-white p-2">
+                  <Link
+                    to="#"
+                    className="hover:text-blue-600 transition-colors"
+                  >
+                    <FaLinkedin className="w-5 h-5" />
+                  </Link>
+                  </div>
+                  <div className="bg-black text-white p-2">
+                  <Link to="#" className="hover:text-red-600 transition-colors">
+                    <FaYoutube className="w-5 h-5" />
+                  </Link>
+                  </div>
+                </div>
+          </div>
+          {/* card-6 */}
+          <div className="border-2 border-gray-300 p-8">
+              <div className="flex gap-4 mb-6">
+                <h3 className="text-blue-700 font-bold">__ _</h3>
+                <h3 className="text-blue-950 font-bold text-xl">Twitter Feeds</h3>
+              </div>
+              <div className="flex flex-col">
+                {[
+                  {link: (<>Rescue - #Gutenberg ready @ wordpress <br/> Theme for Creative Bloggers available on <br/> @ ThemeForest https://t.co/2r1POjOjgV <br/> C… https://t.co/rDAnPyClu1</>), date:"November 25, 2018"},
+                  {link: (<>Rescue - #Gutenberg ready @ wordpress <br/> Theme for Creative Bloggers available on <br/> @ ThemeForest https://t.co/2r1POjOjgV <br/> C… https://t.co/rDAnPyClu1</>), date:"November 25, 2018"},
+                  {link: (<>Rescue - #Gutenberg ready @ wordpress <br/> Theme for Creative Bloggers available on <br/> @ ThemeForest https://t.co/2r1POjOjgV <br/> C… https://t.co/rDAnPyClu1</>), date:"November 25, 2018"},
+                ].map((key, idx) => 
+                <div className="flex gap-4" key={idx}>
+                  <Link>
+                  <FaTwitter className="text-blue-600"/>
+                  </Link>
+                  <div className="flex flex-col gap-3 mb-2">
+                      <Link className="text-xs text-blue-700">{key.link}</Link>
+                      <p className="text-sm text-gray-700">{key.date}</p>
+                      <hr/>
+                  </div>
+                </div>)}
+              </div>
+          </div>
+          {/* card-7 */}
+          <div className="border-2 border-gray-300 p-8">
+              <div className="flex gap-4 mb-6">
+                <h3 className="text-blue-700 font-bold">__ _</h3>
+                <h3 className="text-blue-950 font-bold text-xl">Instagram Feeds</h3>
+              </div>
+              <div className="grid grid-cols-3 grid-rows-3 gap-3">
+                  {[
+                    {image: "https://html.webtend.net/omnivus/assets/img/sidebar/instagram-1.jpg"},
+                    {image: "https://html.webtend.net/omnivus/assets/img/sidebar/instagram-2.jpg"},
+                    {image: "https://html.webtend.net/omnivus/assets/img/sidebar/instagram-3.jpg"},
+                    {image: "https://html.webtend.net/omnivus/assets/img/sidebar/instagram-4.jpg"},
+                    {image: "https://html.webtend.net/omnivus/assets/img/sidebar/instagram-5.jpg"},
+                    {image: "https://html.webtend.net/omnivus/assets/img/sidebar/instagram-6.jpg"},
+                    {image: "https://html.webtend.net/omnivus/assets/img/sidebar/instagram-7.jpg"},
+                    {image: "https://html.webtend.net/omnivus/assets/img/sidebar/instagram-8.jpg"},
+                    {image: "https://html.webtend.net/omnivus/assets/img/sidebar/instagram-9.jpg"},
+                  ].map((key, idx) => 
+                  <img key={idx} src={key.image} className="hover:cursor-pointer"/>)}
+              </div>
+          </div>
+          {/* card-8 */}
+          <div className="border-2 border-gray-300 p-8">
+              <div className="flex gap-4 mb-6">
+                <h3 className="text-blue-700 font-bold">__ _</h3>
+                <h3 className="text-blue-950 font-bold text-xl">Popular Tags</h3>
+              </div> 
+              <div className="grid grid-cols-3 grid-rows-4 gap-2">
+                {[
+                  {tags: "Popular"},
+                  {tags: "design"},
+                  {tags: "ux"},
+                  {tags: "usability"},
+                  {tags: "develop"},
+                  {tags: "icon"},
+                  {tags: "business"},
+                  {tags: "consult"},
+                  {tags: "kit"},
+                  {tags: "keyboard"},
+                  {tags: "mouse"},
+                  {tags: "tech"},
+                ].map((item, idx) => 
+                <button key = {idx} className="bg-blue-100 p-2 text-black text-sm hover:text-white hover:bg-blue-700">
+                    {item.tags}
+                </button>)}
+              </div>
+          </div>
+          {/* card-9 */}
+          <div className="border-2 border-gray-300 text-center p-8 bg-[url('https://html.webtend.net/omnivus/assets/img/sidebar/sidebar-ad-2.jpg')] bg-cover bg-center h-[12.5%]">
+              <div className="flex flex-col text-white font-bold items-center bg-blue-700 py-6 mt-60">
+                <h3 className="text-xl">350x600</h3>
+                <h1 className="text-3xl">Add Banner</h1>
+              </div>
+          </div>
+        </div>
         </div>
         <Footer />
       </section>

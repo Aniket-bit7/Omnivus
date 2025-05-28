@@ -23,11 +23,11 @@ const Header = () => {
         <div className="hidden xl:flex space-x-6 justify-center items-center text-lg">
           <div className="flex space-x-8 justify-center items-center font-medium text-stone-700">
             <Link to="/" className="hover:text-blue-900 transition-colors">Home +</Link>
-            <Link to="/" className="hover:text-blue-900 transition-colors">About</Link>
+            <Link className="hover:text-blue-900 transition-colors">About</Link>
             <Link to="/services" className="hover:text-blue-900 transition-colors">Services +</Link>
-            <Link to="/" className="hover:text-blue-900 transition-colors">Pages +</Link>
+            <Link className="hover:text-blue-900 transition-colors">Pages +</Link>
             <Link to="/blog" className="hover:text-blue-900 transition-colors">Blog +</Link>
-            <Link to="/" className="hover:text-blue-900 transition-colors">Contact</Link>
+            <Link className="hover:text-blue-900 transition-colors">Contact</Link>
           </div>
           <div className="flex space-x-4 justify-center items-center">
             <Link to="/">
